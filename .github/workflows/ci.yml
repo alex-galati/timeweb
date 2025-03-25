@@ -29,4 +29,5 @@ jobs:
       - name: Run Makefile targets
         run: |
           make test
+          make run
 
