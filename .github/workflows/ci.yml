@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # Specify the Python version
+          python-version: '2.7.17'  # Specify the Python version
 
       - name: Run Makefile targets
         run: |
