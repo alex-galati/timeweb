@@ -25,7 +25,7 @@ run:
 	@if [ -d "env/bin" ]; then 							\
 		. env/bin/activate && export FLASK_RUN_HOST=0.0.0.0 && export FLASK_RUN_PORT=6969 && flask run;\
 	elif [[ -d env/Scripts ]]; then 					\
-		. env/Scripts/activate && flask run;			\
+		. env/Scripts/activate && export FLASK_RUN_HOST=0.0.0.0 && export FLASK_RUN_PORT=6969 && flask run;			\
 	else                                    			\
 		echo "Failed to create a virtual environment.";	\
 	fi
