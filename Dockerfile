@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+from ubuntu:latest
 
 run apt-get update && apt-get install -y\
     vim curl git sudo gcc g++ \
@@ -8,13 +8,16 @@ run apt-get update && apt-get install -y\
 run useradd -m developer && echo "developer ALL=(ALL) NOPASSWD:ALL" >/etc/sudoers.d/developer
 
 user developer
-WORKDIR /home/developer
+workdir /home/developer
 
 run git clone https://$GITHUB_TOKEN@github.com/alex-galati/timeweb
 
 copy .profile /home/developer/.profile
-run "\n. ~/.profile\n" >>home/developer/.bashrc
+run echo "\n. ~/.profile\n" >> /home/developer/.bashrc
+run echo ". ~/env/bin/activate" >> ~/.bashrc
 
-run pip install -r requirements.txt
+run python3 -m venv /home/developer/env
+run /home/developer/env/bin/pip install -r /home/developer/timeweb/requirements.txt
+
 
 cmd ["/bin/bash"]
