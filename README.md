@@ -1,6 +1,6 @@
 Hello! Here is how to acquire and activate the Docker dev environment for my timeweb app!
 1. Open Git Bash.
-2. Log onto the HPC4 server, since it is readily available and has access to docker innately. 
+2. Log onto the HPC4 server, since it is readily available and has access to docker innately. If you have another environment with docker commands available, then that is fine as well. 
 3. In the command line, use this command to pull my Docker image of timeweb:
     docker pull alexgalati/timeweb_dev_environment
 4. Open another GitHub Browser tab, and login if necessary. Although you are reading this on GitHub, so this might be a little redundant, but oh well. 
