@@ -14,10 +14,10 @@ run git clone https://$GITHUB_TOKEN@github.com/alex-galati/timeweb
 
 copy .profile /home/developer/.profile
 run echo "\n. ~/.profile\n" >> /home/developer/.bashrc
-run echo ". ~/env/bin/activate" >> ~/.bashrc
+run echo ". ~/timeweb/env/bin/activate" >> ~/.bashrc
 
-run python3 -m venv /home/developer/env
-run /home/developer/env/bin/pip install -r /home/developer/timeweb/requirements.txt
+run python3 -m venv /home/developer/timeweb/env
+run /home/developer/timeweb/env/bin/pip install -r /home/developer/timeweb/requirements.txt
 
 
 cmd ["/bin/bash"]
